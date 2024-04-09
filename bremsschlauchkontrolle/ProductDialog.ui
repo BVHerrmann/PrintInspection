@@ -1,0 +1,721 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>ProductDialog</class>
+ <widget class="QDialog" name="ProductDialog">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>454</width>
+    <height>501</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>ProductDialog</string>
+  </property>
+  <property name="styleSheet">
+   <string notr="true">QDialog{
+     background:rgb(218,220,224);
+}
+</string>
+  </property>
+  <layout class="QGridLayout" name="gridLayout_5">
+   <property name="leftMargin">
+    <number>0</number>
+   </property>
+   <property name="topMargin">
+    <number>0</number>
+   </property>
+   <property name="rightMargin">
+    <number>0</number>
+   </property>
+   <property name="bottomMargin">
+    <number>0</number>
+   </property>
+   <item row="0" column="0">
+    <layout class="QGridLayout" name="gridLayout_4">
+     <item row="0" column="0" colspan="2">
+      <widget class="QFrame" name="frameDashBoardRequestPICOCommands">
+       <property name="sizePolicy">
+        <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+         <horstretch>0</horstretch>
+         <verstretch>0</verstretch>
+        </sizepolicy>
+       </property>
+       <property name="minimumSize">
+        <size>
+         <width>0</width>
+         <height>82</height>
+        </size>
+       </property>
+       <property name="maximumSize">
+        <size>
+         <width>16777215</width>
+         <height>82</height>
+        </size>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">QFrame{
+     background:rgb(249,247,248);
+     min-height: 80px;
+     max-height: 80px;
+}
+
+QLabel{
+  background:rgb(249,247,248);
+  color: rgb(39,51,66);
+  font-size: 16px;
+  font-family: Siemens Sans;
+  min-height: 18px;
+  max-height: 18px;
+}
+
+QLineEdit
+{
+    background:rgb(255,255,255);
+    color:rgb(39,51,66);
+    font-size: 16px;
+    font-weight: bold;
+    font-family: Siemens Sans;
+    border: 1px solid rgb(39,51,66); 
+    min-height: 32px;
+    max-height: 32px;
+}
+
+</string>
+       </property>
+       <property name="frameShape">
+        <enum>QFrame::StyledPanel</enum>
+       </property>
+       <property name="frameShadow">
+        <enum>QFrame::Raised</enum>
+       </property>
+       <layout class="QGridLayout" name="gridLayout_2">
+        <property name="leftMargin">
+         <number>16</number>
+        </property>
+        <property name="rightMargin">
+         <number>16</number>
+        </property>
+        <item row="2" column="0">
+         <widget class="QLineEdit" name="lineEditCurrentProduct">
+          <property name="minimumSize">
+           <size>
+            <width>0</width>
+            <height>34</height>
+           </size>
+          </property>
+          <property name="maximumSize">
+           <size>
+            <width>16777215</width>
+            <height>34</height>
+           </size>
+          </property>
+          <property name="font">
+           <font>
+            <family>Siemens Sans</family>
+            <pointsize>-1</pointsize>
+            <weight>75</weight>
+            <bold>true</bold>
+           </font>
+          </property>
+          <property name="styleSheet">
+           <string notr="true"/>
+          </property>
+          <property name="alignment">
+           <set>Qt::AlignCenter</set>
+          </property>
+          <property name="readOnly">
+           <bool>true</bool>
+          </property>
+         </widget>
+        </item>
+        <item row="1" column="0">
+         <widget class="QLabel" name="labelCurrentProduct">
+          <property name="font">
+           <font>
+            <family>Siemens Sans</family>
+            <pointsize>-1</pointsize>
+           </font>
+          </property>
+          <property name="styleSheet">
+           <string notr="true"/>
+          </property>
+          <property name="text">
+           <string>Current Product</string>
+          </property>
+          <property name="alignment">
+           <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter</set>
+          </property>
+         </widget>
+        </item>
+       </layout>
+      </widget>
+     </item>
+     <item row="1" column="0">
+      <widget class="QFrame" name="frameDashBoardListProducts">
+       <property name="sizePolicy">
+        <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+         <horstretch>0</horstretch>
+         <verstretch>0</verstretch>
+        </sizepolicy>
+       </property>
+       <property name="minimumSize">
+        <size>
+         <width>0</width>
+         <height>64</height>
+        </size>
+       </property>
+       <property name="maximumSize">
+        <size>
+         <width>16777215</width>
+         <height>16777215</height>
+        </size>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">QFrame{
+     background:rgb(249,247,248);
+}
+
+QLabel{
+  background:rgb(249,247,248);
+  color: rgb(39,51,66);
+  font-size: 16px;
+  font-family: Siemens Sans;
+  min-height: 18px;
+  max-height: 18px;
+}
+QListWidget
+ {
+    background-color:  rgb(31, 39, 42);
+    color: rgb(249, 247, 248 );
+    selection-background-color: red;
+}
+
+QListWidget:item
+{
+    selection-background-color: red;
+}
+
+QScrollBar:horizontal 
+{
+    height: 30px;
+    background:  rgb(249, 247, 248 );
+}
+
+QScrollBar:vertical
+{
+     width: 30px;
+     background:  rgb(249, 247, 248 );
+}
+</string>
+       </property>
+       <property name="frameShape">
+        <enum>QFrame::StyledPanel</enum>
+       </property>
+       <property name="frameShadow">
+        <enum>QFrame::Raised</enum>
+       </property>
+       <layout class="QGridLayout" name="gridLayout_3">
+        <property name="leftMargin">
+         <number>16</number>
+        </property>
+        <item row="0" column="0">
+         <widget class="QLabel" name="labelDashBoardListProducts">
+          <property name="font">
+           <font>
+            <family>Siemens Sans</family>
+            <pointsize>-1</pointsize>
+           </font>
+          </property>
+          <property name="text">
+           <string>List Current Products</string>
+          </property>
+         </widget>
+        </item>
+        <item row="1" column="0">
+         <widget class="QListWidget" name="listProducts">
+          <property name="font">
+           <font>
+            <family>Siemens Sans</family>
+            <pointsize>16</pointsize>
+            <weight>75</weight>
+            <bold>true</bold>
+           </font>
+          </property>
+          <property name="styleSheet">
+           <string notr="true"/>
+          </property>
+          <property name="alternatingRowColors">
+           <bool>false</bool>
+          </property>
+          <property name="currentRow">
+           <number>-1</number>
+          </property>
+          <property name="sortingEnabled">
+           <bool>false</bool>
+          </property>
+         </widget>
+        </item>
+       </layout>
+      </widget>
+     </item>
+     <item row="1" column="1">
+      <widget class="QFrame" name="frameDashBoardProductDialogs">
+       <property name="sizePolicy">
+        <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+         <horstretch>0</horstretch>
+         <verstretch>0</verstretch>
+        </sizepolicy>
+       </property>
+       <property name="minimumSize">
+        <size>
+         <width>0</width>
+         <height>0</height>
+        </size>
+       </property>
+       <property name="maximumSize">
+        <size>
+         <width>16777213</width>
+         <height>16777214</height>
+        </size>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">QFrame{
+     background:rgb(249,247,248);
+}
+
+QLabel{
+  color: rgb(39,51,66);
+  font-size: 16px;
+  font-family: Siemens Sans;
+}
+
+</string>
+       </property>
+       <property name="frameShape">
+        <enum>QFrame::StyledPanel</enum>
+       </property>
+       <property name="frameShadow">
+        <enum>QFrame::Raised</enum>
+       </property>
+       <layout class="QGridLayout" name="gridLayout">
+        <item row="0" column="0">
+         <widget class="QPushButton" name="pushButtonReadAndAppendProduct">
+          <property name="font">
+           <font>
+            <family>Siemens Sans</family>
+            <pointsize>-1</pointsize>
+            <weight>75</weight>
+            <bold>true</bold>
+           </font>
+          </property>
+          <property name="autoFillBackground">
+           <bool>false</bool>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">QPushButton{
+   background-color: rgb(64, 77, 83 );
+   color: rgb(255, 255, 255 );
+   min-height: 40px;
+   font-size: 16px;
+   font-weight: bold;
+   font-family: Siemens Sans;
+  border: none;
+}
+
+QPushButton:pressed {
+    border: 2px solid rgb(148,182, 231 ); 
+ }
+
+</string>
+          </property>
+          <property name="text">
+           <string>Add New Product</string>
+          </property>
+          <property name="checkable">
+           <bool>false</bool>
+          </property>
+          <property name="autoRepeat">
+           <bool>false</bool>
+          </property>
+          <property name="autoDefault">
+           <bool>false</bool>
+          </property>
+          <property name="flat">
+           <bool>false</bool>
+          </property>
+         </widget>
+        </item>
+        <item row="1" column="0">
+         <widget class="QPushButton" name="pushButtonLoadProduct">
+          <property name="minimumSize">
+           <size>
+            <width>0</width>
+            <height>40</height>
+           </size>
+          </property>
+          <property name="font">
+           <font>
+            <family>Siemens Sans</family>
+            <pointsize>-1</pointsize>
+            <weight>75</weight>
+            <bold>true</bold>
+           </font>
+          </property>
+          <property name="focusPolicy">
+           <enum>Qt::NoFocus</enum>
+          </property>
+          <property name="autoFillBackground">
+           <bool>false</bool>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">QPushButton{
+   background-color: rgb(64, 77, 83 );
+   color: rgb(255, 255, 255 );
+   min-height: 40px;
+   font-size: 16px;
+   font-weight: bold;
+   font-family: Siemens Sans;
+  border: none;
+}
+
+QPushButton:pressed {
+    border: 2px solid rgb(148,182, 231 ); 
+ }
+
+</string>
+          </property>
+          <property name="text">
+           <string>Load Product</string>
+          </property>
+          <property name="checkable">
+           <bool>false</bool>
+          </property>
+          <property name="autoRepeat">
+           <bool>false</bool>
+          </property>
+          <property name="autoDefault">
+           <bool>false</bool>
+          </property>
+          <property name="flat">
+           <bool>false</bool>
+          </property>
+         </widget>
+        </item>
+        <item row="2" column="0">
+         <widget class="QPushButton" name="pushButtonRenameProduct">
+          <property name="font">
+           <font>
+            <family>Siemens Sans</family>
+            <pointsize>-1</pointsize>
+            <weight>75</weight>
+            <bold>true</bold>
+           </font>
+          </property>
+          <property name="focusPolicy">
+           <enum>Qt::NoFocus</enum>
+          </property>
+          <property name="autoFillBackground">
+           <bool>false</bool>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">QPushButton{
+   background-color: rgb(64, 77, 83 );
+   color: rgb(255, 255, 255 );
+   min-height: 40px;
+   font-size: 16px;
+   font-weight: bold;
+   font-family: Siemens Sans;
+  border: none;
+}
+
+QPushButton:pressed {
+    border: 2px solid rgb(148,182, 231 ); 
+ }
+</string>
+          </property>
+          <property name="text">
+           <string>Rename Product</string>
+          </property>
+          <property name="checkable">
+           <bool>false</bool>
+          </property>
+          <property name="autoRepeat">
+           <bool>false</bool>
+          </property>
+          <property name="autoDefault">
+           <bool>false</bool>
+          </property>
+          <property name="flat">
+           <bool>false</bool>
+          </property>
+         </widget>
+        </item>
+        <item row="3" column="0">
+         <widget class="QPushButton" name="pushButtonEditProduct">
+          <property name="font">
+           <font>
+            <family>Siemens Sans</family>
+            <pointsize>-1</pointsize>
+            <weight>75</weight>
+            <bold>true</bold>
+           </font>
+          </property>
+          <property name="focusPolicy">
+           <enum>Qt::NoFocus</enum>
+          </property>
+          <property name="autoFillBackground">
+           <bool>false</bool>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">QPushButton{
+   background-color: rgb(64, 77, 83 );
+   color: rgb(255, 255, 255 );
+   min-height: 40px;
+   font-size: 16px;
+   font-weight: bold;
+   font-family: Siemens Sans;
+  border: none;
+}
+
+QPushButton:pressed {
+    border: 2px solid rgb(148,182, 231 ); 
+ }
+</string>
+          </property>
+          <property name="text">
+           <string>Edit Product</string>
+          </property>
+          <property name="checkable">
+           <bool>false</bool>
+          </property>
+          <property name="autoRepeat">
+           <bool>false</bool>
+          </property>
+          <property name="autoDefault">
+           <bool>false</bool>
+          </property>
+          <property name="flat">
+           <bool>false</bool>
+          </property>
+         </widget>
+        </item>
+        <item row="4" column="0">
+         <widget class="QPushButton" name="pushButtonExportProduct">
+          <property name="font">
+           <font>
+            <family>Siemens Sans</family>
+            <pointsize>-1</pointsize>
+            <weight>75</weight>
+            <bold>true</bold>
+           </font>
+          </property>
+          <property name="focusPolicy">
+           <enum>Qt::NoFocus</enum>
+          </property>
+          <property name="autoFillBackground">
+           <bool>false</bool>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">QPushButton{
+   background-color: rgb(64, 77, 83 );
+   color: rgb(255, 255, 255 );
+   min-height: 40px;
+   font-size: 16px;
+   font-weight: bold;
+   font-family: Siemens Sans;
+  border: none;
+}
+
+QPushButton:pressed {
+    border: 2px solid rgb(148,182, 231 ); 
+ }
+</string>
+          </property>
+          <property name="text">
+           <string>Export Product</string>
+          </property>
+          <property name="checkable">
+           <bool>false</bool>
+          </property>
+          <property name="autoRepeat">
+           <bool>false</bool>
+          </property>
+          <property name="autoDefault">
+           <bool>false</bool>
+          </property>
+          <property name="flat">
+           <bool>false</bool>
+          </property>
+         </widget>
+        </item>
+        <item row="5" column="0">
+         <widget class="QPushButton" name="pushButtonImportProduct">
+          <property name="font">
+           <font>
+            <family>Siemens Sans</family>
+            <pointsize>-1</pointsize>
+            <weight>75</weight>
+            <bold>true</bold>
+           </font>
+          </property>
+          <property name="focusPolicy">
+           <enum>Qt::NoFocus</enum>
+          </property>
+          <property name="autoFillBackground">
+           <bool>false</bool>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">QPushButton{
+   background-color: rgb(64, 77, 83 );
+   color: rgb(255, 255, 255 );
+   min-height: 40px;
+   font-size: 16px;
+   font-weight: bold;
+   font-family: Siemens Sans;
+  border: none;
+}
+
+QPushButton:pressed {
+    border: 2px solid rgb(148,182, 231 ); 
+ }
+</string>
+          </property>
+          <property name="text">
+           <string>Import Product</string>
+          </property>
+          <property name="checkable">
+           <bool>false</bool>
+          </property>
+          <property name="autoRepeat">
+           <bool>false</bool>
+          </property>
+          <property name="autoDefault">
+           <bool>false</bool>
+          </property>
+          <property name="flat">
+           <bool>false</bool>
+          </property>
+         </widget>
+        </item>
+        <item row="6" column="0">
+         <widget class="QPushButton" name="pushButtonLoadDeleteProduct">
+          <property name="font">
+           <font>
+            <family>Siemens Sans</family>
+            <pointsize>-1</pointsize>
+            <weight>75</weight>
+            <bold>true</bold>
+           </font>
+          </property>
+          <property name="focusPolicy">
+           <enum>Qt::NoFocus</enum>
+          </property>
+          <property name="autoFillBackground">
+           <bool>false</bool>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">QPushButton{
+    background-color: rgb(202, 51, 51 );
+   color: rgb(255, 255, 255 );
+   min-height: 40px;
+   font-size: 16px;
+   font-weight: bold;
+   font-family: Siemens Sans;
+  border: none;
+}
+QPushButton:pressed {
+     border: 1px solid rgb(0,95,135);    
+ }
+</string>
+          </property>
+          <property name="text">
+           <string>Delete Product</string>
+          </property>
+          <property name="checkable">
+           <bool>false</bool>
+          </property>
+          <property name="autoRepeat">
+           <bool>false</bool>
+          </property>
+          <property name="autoDefault">
+           <bool>false</bool>
+          </property>
+          <property name="flat">
+           <bool>false</bool>
+          </property>
+         </widget>
+        </item>
+       </layout>
+      </widget>
+     </item>
+    </layout>
+   </item>
+   <item row="1" column="0">
+    <layout class="QHBoxLayout" name="horizontalLayout">
+     <property name="leftMargin">
+      <number>16</number>
+     </property>
+     <property name="topMargin">
+      <number>8</number>
+     </property>
+     <property name="rightMargin">
+      <number>16</number>
+     </property>
+     <property name="bottomMargin">
+      <number>8</number>
+     </property>
+     <item>
+      <widget class="QPushButton" name="pushButtonClose">
+       <property name="font">
+        <font>
+         <family>Siemens Sans</family>
+         <pointsize>-1</pointsize>
+         <weight>75</weight>
+         <bold>true</bold>
+        </font>
+       </property>
+       <property name="autoFillBackground">
+        <bool>false</bool>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">QPushButton{
+   background-color: rgb(189,192, 197 );
+   color: rgb(39, 51, 66 );
+   min-height: 40px;
+   font-size: 16px;
+   font-weight: bold;
+   font-family: Siemens Sans;
+  border: none;
+}
+QPushButton:pressed {
+     border: 1px solid rgb(0,95,135);    
+ }
+</string>
+       </property>
+       <property name="text">
+        <string>Close</string>
+       </property>
+       <property name="checkable">
+        <bool>false</bool>
+       </property>
+       <property name="autoRepeat">
+        <bool>false</bool>
+       </property>
+       <property name="autoDefault">
+        <bool>false</bool>
+       </property>
+       <property name="flat">
+        <bool>false</bool>
+       </property>
+      </widget>
+     </item>
+    </layout>
+   </item>
+  </layout>
+ </widget>
+ <layoutdefault spacing="6" margin="11"/>
+ <resources/>
+ <connections/>
+</ui>
